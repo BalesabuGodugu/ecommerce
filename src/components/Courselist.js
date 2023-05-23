@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
+
+
+import  {supabase}  from '../lib/supabase';
+import {useState,useEffect} from 'react';
 const CourseList = () => {
     const [courses, setCourses] = useState([]);
   
     useEffect(() => {
       // Create a Supabase client
-      const supabase = createClient('YOUR_SUPABASE_URL', 'YOUR_SUPABASE_PUBLIC_KEY');
+      //const supabase = createClient('YOUR_SUPABASE_URL', 'YOUR_SUPABASE_PUBLIC_KEY');
   
       // Fetch the courses from the database
       const fetchCourses = async () => {
